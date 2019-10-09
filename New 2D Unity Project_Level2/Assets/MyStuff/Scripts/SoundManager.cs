@@ -22,8 +22,7 @@ public class SoundManager : MonoBehaviour
         else
         {
             Destroy(this.gameObject);
-        }
-        
+        }   
     }
 
     public void PlaycoinCollectSound()
