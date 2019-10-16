@@ -12,6 +12,7 @@ public class SoundManager : MonoBehaviour
 
     public AudioClip HitboxSound;
 
+    public AudioClip YouWinSound;
     private void Awake()
     {
         if(Instance == null)
@@ -33,6 +34,11 @@ public class SoundManager : MonoBehaviour
     public void PlayHitboxSound()
     {
         audioSource.clip = HitboxSound;
+        audioSource.Play();
+    }
+    public void PlayYouWinSound()
+    {
+        audioSource.clip = YouWinSound;
         audioSource.Play();
     }
 }

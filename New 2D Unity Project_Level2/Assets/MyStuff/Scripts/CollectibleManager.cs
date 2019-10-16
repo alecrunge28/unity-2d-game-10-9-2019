@@ -35,9 +35,13 @@ public class CollectibleManager : MonoBehaviour
         if(_collectedCoins == _totalCoins)
         {
             coinCount.SetText("Blorgin Hop!");
-            YouWin.Instance.Show();  
+            YouWin.Instance.Show();
+            SoundManager.Instance.PlayYouWinSound(); 
         }
-
-        SoundManager.Instance.PlaycoinCollectSound();
+        else
+        {
+            SoundManager.Instance.PlaycoinCollectSound();
+        }
+        
     }
 }
