@@ -10,14 +10,13 @@ public class Collectible : MonoBehaviour
     {
         if (!_hasBeenCollected && collision.gameObject.GetComponent<PlatformerCharacter2D>())
         {
-                HandleCollected();
+            HandleCollected();
         }
     }
 
-    void HandleCollected()
+    public virtual void HandleCollected()
     {
         _hasBeenCollected = true;
-        CollectibleManager.Instance.HandleCoinCollected(); 
         Destroy(gameObject);
     }  
 }
